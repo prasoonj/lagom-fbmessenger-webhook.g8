@@ -36,6 +36,9 @@ $ tree -L 3
 $ cd chatbot
 $ sbt runAll
 
+$ curl -X GET \
+  'http://localhost:9000/api/v1/fbwebhook?hub.challenge=asdf&hub.mode=subscribe&hub.verify_token=somecomplicatedtoken'
+
 ```
 
 Template license
