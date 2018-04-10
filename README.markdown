@@ -1,4 +1,42 @@
-A [Giter8][g8] template for ...!
+A [Giter8][g8] template for creating a Lagom based microservice that acts as a Facebook Messenger Webhook!
+
+# Usage
+
+```
+$ sbt new prasoonj/lagom-fbmessenger-webhook.g8
+[info] Set current project to test (in build file:/Users/prasoonjoshi/code/test/)
+
+The next big ChatBot.
+
+name [Hello]: chatbot  
+organization [com.example]:
+version [1.0-SNAPSHOT]:
+package [com.example.chatbot]:
+facebookVerificationToken [somecomplicatedtoken]: secrettoken
+
+Template applied in ./chatbot
+
+$ tree -L 3
+.
+├── chatbot
+│   ├── build.sbt
+│   ├── project
+│   │   ├── build.properties
+│   │   └── plugins.sbt
+│   ├── webhooks-api
+│   │   └── src
+│   └── webhooks-impl
+│       └── src
+└── target
+    └── streams
+        └── $global
+
+9 directories, 3 files
+
+$ cd chatbot
+$ sbt runAll
+
+```
 
 Template license
 ----------------
